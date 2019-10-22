@@ -1,12 +1,12 @@
 package com.pgg.requisicaohttp;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+import java.io.*;
+import java.net.*;
+import org.apache.http.HttpEntity;
+import org.apache.http.client.*;
+import org.apache.http.client.methods.HttpDelete;
+import org.apache.http.impl.client.*;
+import org.apache.http.util.EntityUtils;
 
 public class RequisicaoHTTP {
     public static String retornaRequisicao(String link, String jsonString) throws MalformedURLException, IOException {       
@@ -32,6 +32,28 @@ public class RequisicaoHTTP {
             }
             
             return response.toString();
+        }
+    }
+       
+    public static String deletaRequisicao(String url) throws IOException {
+        try (CloseableHttpClient cliente = HttpClients.createDefault()) {
+            HttpDelete delecao = new HttpDelete(url);
+
+            delecao.getRequestLine();
+
+            ResponseHandler<String> responseHandler = response -> {
+                int status = response.getStatusLine().getStatusCode();
+                
+                if (status >= 200 && status < 300) {
+                    HttpEntity entity = response.getEntity();
+                    return entity != null ? EntityUtils.toString(entity) : null;
+                } else {
+                    throw new ClientProtocolException("Unexpected response status: " + status);
+                }
+            };
+            String responseBody = cliente.execute(delecao, responseHandler);
+            
+            return responseBody;
         }
     }
 }

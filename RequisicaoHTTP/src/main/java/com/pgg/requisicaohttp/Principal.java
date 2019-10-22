@@ -4,9 +4,11 @@ import java.io.IOException;
 
 public class Principal {
     public static void main(String[] args) throws IOException  {
-        String link = "http://httpbin.org/post";
+        String post = "http://httpbin.org/post";
         String json = "{ \"id\": 123, \"field\": \"testing\"}";
+        System.out.println(RequisicaoHTTP.retornaRequisicao(post, json));
         
-        System.out.print(RequisicaoHTTP.retornaRequisicao(link, json));
+        String delete = "http://httpbin.org/delete";        
+        System.out.println(RequisicaoHTTP.deletaRequisicao(delete));        
     }
 }
