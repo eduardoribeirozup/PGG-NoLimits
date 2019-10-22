@@ -24,14 +24,14 @@ public class RequisicaoHTTP {
         }
         
         try(BufferedReader br = new BufferedReader(new InputStreamReader(conexao.getInputStream(), "utf-8"))) {
-            String responseLine;
-            StringBuilder response = new StringBuilder();
+            String linha;
+            StringBuilder resposta = new StringBuilder();
                         
-            while ((responseLine = br.readLine()) != null) {
-                response.append(responseLine.trim());
+            while ((linha = br.readLine()) != null) {
+                resposta.append(linha.trim());
             }
             
-            return response.toString();
+            return resposta.toString();
         }
     }
        
@@ -46,14 +46,38 @@ public class RequisicaoHTTP {
                 
                 if (status >= 200 && status < 300) {
                     HttpEntity entity = response.getEntity();
-                    return entity != null ? EntityUtils.toString(entity) : null;
+                    if (entity != null)
+                        return EntityUtils.toString(entity);
+                    else
+                        return null;
                 } else {
-                    throw new ClientProtocolException("Unexpected response status: " + status);
+                    throw new ClientProtocolException("Status não interpretado: " + status);
                 }
             };
             String responseBody = cliente.execute(delecao, responseHandler);
             
             return responseBody;
         }
+    }
+    
+    public static String autenticaRequisicao(String link) throws MalformedURLException, IOException {
+        URL url = new URL(link);
+        HttpURLConnection conexao = (HttpURLConnection)url.openConnection();
+
+        conexao.setRequestProperty("Authorization","Bearer "+" Actual bearer token issued by provider.");
+
+        conexao.setRequestProperty("Content-Type","application/json");
+        conexao.setRequestMethod("GET");
+
+        StringBuffer response;
+        try (BufferedReader in = new BufferedReader(new InputStreamReader(conexao.getInputStream()))) {
+            String output;
+            response = new StringBuffer();
+            while ((output = in.readLine()) != null) {
+                response.append(output);
+            }
+        }
+        
+        return response.toString();
     }
 }
