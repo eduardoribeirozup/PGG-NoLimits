@@ -7,12 +7,12 @@ Este repositório, em específico, serve para adicionar os códigos dos desafios
    2. Entre na subpasta "target";
    3. Faça o download do arquivo "ListarDiretorios-1.0.jar";
    4. Na pasta de destino do arquivo, escreva o copie e execute (no terminal) o seguinte comando **java -jar ListarDiretorios-1.0.jar**
-   - Criar um programa que apresente os primeiros tópicos do Reddit (/r/programming) em ordem alfabética
+ - Criar um programa que apresente os primeiros tópicos do Reddit (/r/programming) em ordem alfabética
    1. Entre na pasta "ListarReddit";
    2. Entre na subpasta "target";
    3. Faça o download do arquivo "ListarReddit-1.0.jar" e da pasta "lib";
    4. Na pasta de destino do arquivo, escreva o copie e execute (no terminal) o seguinte comando **java -jar ListarReddit-1.0.jar**. **IMPORTANTE: A PASTA 'lib' e o arquivo executável devem estar dentro do mesmo diretório.**
-   - Criar um programa que faça requisições de métodos diferentes (post, delete e autenticação) e mostre na tela o resultado.
+ - Criar um programa que faça requisições de métodos diferentes (post, delete e autenticação) e mostre na tela o resultado.
    1. Entre na pasta "RequisicaoHTTP";
    2. Entre na subpasta "target";
    3. Faça o download do arquivo "RequisicaoHTTP-1.0.jar";
