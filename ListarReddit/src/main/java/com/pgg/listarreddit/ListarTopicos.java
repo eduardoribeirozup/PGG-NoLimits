@@ -9,7 +9,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class ListarTopicos {
-    public static final String site = "https://www.reddit.com/r/programming/new";
+    public static final String site = "https://www.reddit.com/r/programming/";
     
     public static List<String> retornaTopicos() throws IOException {
         List<String> titulos = new ArrayList <String>();
