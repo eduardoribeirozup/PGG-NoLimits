@@ -2,14 +2,9 @@ package com.pgg.requisicaohttp;
 
 import java.io.*;
 import java.net.*;
-import org.apache.http.HttpEntity;
-import org.apache.http.client.*;
-import org.apache.http.client.methods.HttpDelete;
-import org.apache.http.impl.client.*;
-import org.apache.http.util.EntityUtils;
 
 public class RequisicaoHTTP {
-    public static String retornaRequisicao(String link, String jsonString) throws MalformedURLException, IOException {       
+    public static String retornaRequisicao(String link, String jsonString) throws IOException {
         URL url = new URL(link);
         HttpURLConnection conexao = (HttpURLConnection)url.openConnection();
         
@@ -35,29 +30,31 @@ public class RequisicaoHTTP {
         }
     }
        
-    public static String deletaRequisicao(String url) throws IOException {
-        try (CloseableHttpClient cliente = HttpClients.createDefault()) {
-            HttpDelete delecao = new HttpDelete(url);
+    public static String deletaRequisicao(String link) {
+        try {
+            String auxiliar = null;
+            StringBuilder retorno = new StringBuilder();
 
-            delecao.getRequestLine();
+            URL url = new URL(link);
+            HttpURLConnection conexao = (HttpURLConnection) url.openConnection();
 
-            ResponseHandler<String> responseHandler = response -> {
-                int status = response.getStatusLine().getStatusCode();
-                
-                if (status >= 200 && status < 300) {
-                    HttpEntity entity = response.getEntity();
-                    if (entity != null)
-                        return EntityUtils.toString(entity);
-                    else
-                        return null;
-                } else {
-                    throw new ClientProtocolException("Status não interpretado: " + status);
-                }
-            };
-            String responseBody = cliente.execute(delecao, responseHandler);
-            
-            return responseBody;
+            conexao.setDoOutput(true);
+            conexao.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+
+            conexao.setRequestMethod("DELETE");
+            conexao.connect();
+
+            BufferedReader linha = new BufferedReader(new InputStreamReader(conexao.getInputStream()));
+            while((auxiliar = linha.readLine()) != null){
+                retorno.append(auxiliar).append(" ");
+            }
+
+           return retorno.toString();
+        } catch (Exception e) {
+            System.out.println("Não foi possível realizar a operação: " + e);
         }
+
+        return null;
     }
     
     public static String autenticaRequisicao(String link) throws MalformedURLException, IOException {
