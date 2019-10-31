@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee97b7a1-bf02-49c9-8682-03c077d81b98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Download errors.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputFiles.lst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pgg/listarreddit/ListarTopicos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pgg/listarreddit/ListarTopicos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ListarReddit-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/ListarReddit-1.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pgg/listarreddit/ListarTopicos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pgg/listarreddit/ListarTopicos.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/pgg/listarreddit/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pgg/listarreddit/Principal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-    </list>
+    <list default="true" id="ee97b7a1-bf02-49c9-8682-03c077d81b98" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +30,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/TesteSpringBoot" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
