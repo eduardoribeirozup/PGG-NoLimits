@@ -1,9 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.pgg.registrochave.RegistroChaveTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.092 s <<< FAILURE! - in com.pgg.registrochave.RegistroChaveTests
-contextLoads  Time elapsed: 0.001 s  <<< ERROR!
-java.lang.IllegalStateException: Failed to load ApplicationContext
-Caused by: java.lang.IllegalStateException: Failed to execute CommandLineRunner
-Caused by: java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
-
