@@ -6,7 +6,7 @@ Este repositório, em específico, serve para adicionar os códigos dos desafios
    1. Entre na pasta "ListarDiretorios";
    2. Entre na subpasta "target";
    3. Faça o download do arquivo "ListarDiretorios-1.0.jar";
-   4. Na pasta de destino do arquivo, escreva o copie e execute (no terminal) o seguinte comando **java -jar ListarDiretorios-1.0.jar**
+   4. Na pasta de destino do arquivo, escreva ou copie e execute (no terminal) o seguinte comando **java -jar ListarDiretorios-1.0.jar**
  - Criar um programa que apresente os primeiros tópicos do Reddit (/r/programming) em ordem alfabética
    1. Entre na pasta "ListarReddit";
    2. Entre na subpasta "target";
@@ -16,4 +16,17 @@ Este repositório, em específico, serve para adicionar os códigos dos desafios
    1. Entre na pasta "RequisicaoHTTP";
    2. Entre na subpasta "target";
    3. Faça o download do arquivo "RequisicaoHTTP-1.0.jar";
-   4. Na pasta de destino do arquivo, escreva o copie e execute (no terminal) o seguinte comando **java -jar RequisicaoHTTP-1.0.jar**
+   4. Na pasta de destino do arquivo, escreva ou copie e execute (no terminal) o seguinte comando **java -jar RequisicaoHTTP-1.0.jar**
+ - Criar um programa, usando Spring Boot que, dentro de um arquivo de texto, insira, capture, liste e delete o texto de uma chave seguido por um registro. Exemplo: 
+         matheus:filho
+         joana:irmã
+         pedro:pai
+         carla:mãe
+   1. Entre na pasta "RegistroChave";
+   2. Entre na subpasta "target";
+   3. Faça o download do arquivo "registrochave-0.0.1.jar";
+   4. Na pasta de destino do arquivo, escreva ou copie e execute (no terminal) um dos seguintes comandos 
+     - **java -jar registrochave-0.0.1.jar set [chave]:[registro]** > cria um novo arquivo ou escreve no mesmo arquivo a chave e o registro inseridos.
+     - **java -jar registrochave-0.0.1.jar get [chave]** >  retorna o valor da chave inserida;
+     - **java -jar registrochave-0.0.1.jar delete [chave]** > deleta a chave e o registro especificado;
+     - **java -jar registrochave-0.0.1.jar list** > lista todas as chaves e seus registros
